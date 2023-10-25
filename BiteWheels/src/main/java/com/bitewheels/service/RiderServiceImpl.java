@@ -24,6 +24,7 @@ public class RiderServiceImpl implements RiderService {
 		Users user = userRepo.findById(userId).orElseThrow(() -> new NotFoundException("User not found!"));
 		user.setRole(Roles.RIDER);
 		rider.setUser(user);
+		rider.setAvailability(true);
 
 		return riderRepo.save(rider);
 	}

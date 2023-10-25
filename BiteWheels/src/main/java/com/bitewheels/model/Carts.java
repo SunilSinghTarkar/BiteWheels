@@ -11,6 +11,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import lombok.Data;
@@ -20,12 +21,15 @@ import lombok.Data;
 public class Carts {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int cardId;
+	private int cartId;
 	private LocalDateTime creationDate;
+	@JsonIgnore
+	@OneToOne(mappedBy = "cart",cascade = CascadeType.ALL)
+	private Users user;
 	private double totalAmount;
 	@JsonIgnore
 	@OneToOne(mappedBy = "cart", cascade = CascadeType.ALL)
 	private Orders order;
-	@OneToMany(mappedBy = "cart")
+	@OneToMany(mappedBy = "cart", cascade = CascadeType.ALL)
 	private List<OrderItems> orderItems = new ArrayList<>();
 }

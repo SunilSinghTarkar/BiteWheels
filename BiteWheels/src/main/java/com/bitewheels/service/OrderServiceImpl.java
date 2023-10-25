@@ -1,6 +1,7 @@
 package com.bitewheels.service;
 
 import java.time.LocalDateTime;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -58,8 +59,10 @@ public class OrderServiceImpl implements OrderService {
 	}
 
 	@Override
-	public Carts createCart() {
+	public Carts createCart(Integer userId) {
 		Carts cart = new Carts();
+		Users user = userService.getByUserId(userId);
+		cart.setUser(user);
 		cart.setCreationDate(LocalDateTime.now());
 		return cartRepo.save(cart);
 	}
@@ -82,6 +85,7 @@ public class OrderServiceImpl implements OrderService {
 		orderItem.setSubtotal(item.getPrice() * orderItem.getQuantity());
 		cart.setTotalAmount(cart.getTotalAmount() + orderItem.getSubtotal());
 		orderItem.setCart(cart);
+		;
 
 		return orderItemRepo.save(orderItem);
 	}
@@ -112,6 +116,13 @@ public class OrderServiceImpl implements OrderService {
 				.orElseThrow(() -> new NotFoundException("OrderItem not found!"));
 		orderItemRepo.delete(item);
 		return "OrderItem Removed Succesfully";
+	}
+
+	@Override
+	public boolean checkInCart(Integer cartId, Integer itemId) {
+		Optional<OrderItems> item = orderItemRepo.findOrderItemsByCartIdAndItemId(cartId, itemId);
+
+		return item.isPresent();
 	}
 
 }

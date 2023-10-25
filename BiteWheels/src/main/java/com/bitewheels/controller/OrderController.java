@@ -16,16 +16,20 @@ import com.bitewheels.model.Carts;
 import com.bitewheels.model.OrderItems;
 import com.bitewheels.model.Orders;
 import com.bitewheels.service.OrderService;
+import com.bitewheels.service.UserService;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @CrossOrigin
 @RestController
 public class OrderController {
 	@Autowired
 	private OrderService orderService;
 
-	@PostMapping("/carts")
-	public ResponseEntity<Carts> createCart() {
-		Carts cart = orderService.createCart();
+	@PostMapping("/carts/{userId}")
+	public ResponseEntity<Carts> createCart(@PathVariable Integer userId) {
+		Carts cart = orderService.createCart(userId);
 		return new ResponseEntity<Carts>(cart, HttpStatus.CREATED);
 	}
 
@@ -70,6 +74,14 @@ public class OrderController {
 	public ResponseEntity<Orders> placeOrder(@PathVariable Integer orderId) {
 		Orders orders = orderService.getByOrderId(orderId);
 		return new ResponseEntity<>(orders, HttpStatus.OK);
+	}
+
+	@GetMapping("/checkInCart/{cartId}/{itemId}")
+	public ResponseEntity<String> checkInCart(@PathVariable Integer cartId, @PathVariable Integer itemId) {
+		boolean check = orderService.checkInCart(cartId, itemId);
+		log.info("inside checkInCart Method of OrderController " + check);
+		String result = check ? "Yes" : "No";
+		return new ResponseEntity<>(result, HttpStatus.OK);
 	}
 
 }

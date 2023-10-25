@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>BiteWheels Cart Page</title>
+</head>
+<body>
+    <nav>
+        <div class="logo" >
+            <a href=".logo"></a>
+            <img src="/media/bitewheels_logo.jpg" alt="Logo">
+        </div>
+        <h2>BiteWheels</h2>
+        <ul class="menu">
+            <li><a href="/restaurant.html">Menu</a> <i class="fas fa-utensils"></i></li>
+            <li><a href="#">Login</a> <i class="fas fa-user"></i></li>
+            
+        </ul>
+    </nav>
+
+    <div id="container">
+        <div id="container1">
+           
+        </div>
+        <div id="container2">
+            <div id="ordersummary">
+                <h1><b>Oder Summary</b></h1>
+                <hr id="hr1">
+                <p id="congrats"> Congratulations! You get <span> FREE Shipping.</span></p>
+                <hr>
+                <p>Items in your cart are excluded from coupons.</p>
+                <button id="apply">Apply Coupons</button>
+                <div id="coupon-input" style="display:none">
+                    <input type="text" id="coupontext" placeholder="Enter coupon code">
+                    <button id="couponapply">Apply</button>
+                </div>
+    
+                <hr>
+                <div class="subtotal">
+                    <p>Order Subtotal</p>
+                    <p id="sbtotal">00</p>
+                </div>
+                <div class="subtotal">
+                    <p>Sale Discount</p>
+                    <p id="discount">00</p>
+                </div>
+                <div class="subtotal">
+                    <p>Shipping Details</p>
+                    <p>FREE</p>
+                </div>
+                <div class="subtotal">
+                    <h2><b>Pre-Tax Total</b></h2>
+                    <h2 id="pretotal"> <b>00</b></h2>
+                </div>
+                <hr>
+                <hr>
+                <h3 id="saving"> Total Saving <span id="tsaving">00</span></h3>
+                <button id="payment">Payment</button>
+                <div id="otp-input" style="display:none">
+                    <input type="number" id="otpnumber" placeholder="Enter coupon code">
+                    <button id="otpapply">Apply</button>
+                </div>
+    
+            </div>
+        
+        </div>
+
+            </div>
+    <script src="cart.js"></script>
+</body>
+</html>

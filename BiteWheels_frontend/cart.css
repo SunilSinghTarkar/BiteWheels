@@ -1,0 +1,224 @@
+*{
+    margin: 0;padding: 0;
+    font-family: 'Varela Round';
+ }
+ /*Css for Navbar Strats from here*/
+ li {
+     margin: 0;
+     padding: 0;
+     list-style: none;
+     font-family: 'Varela Round';
+ }
+ 
+ nav {
+     background-color: #fff;
+     /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+     box-shadow: rgb(139, 250, 83) 0px 3px 8px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 5px 200px;
+     position: fixed;
+     top: 0;
+     width: 100%;
+     z-index: 999;
+     box-sizing: border-box;
+ 
+ }
+ 
+ .logo img {
+     max-width: 60px;
+     height: auto;
+     border-radius: 20%;
+     cursor: pointer;
+ }
+ 
+ .menu {
+     display: flex;
+ }
+ 
+ .menu li {
+     margin-right: 50px;
+ }
+ 
+ .menu li:last-child {
+     margin-right: 0;
+ }
+ 
+ .menu a {
+     text-decoration: none;
+     color: #000;
+     font-weight: bold;
+ }
+
+ #container{
+    /* border: 2px solid red; */
+    margin:100px 50px ;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+ }
+ 
+ #container1,#container2{
+    padding: 10px 30px;
+    /* border: 2px solid red; */
+    
+ }
+
+ /*Css for the Left container*/
+ #container1 { 
+     display: grid;
+     grid-gap: 20px;
+     grid-template-columns:1fr 1fr 1fr;
+     padding: 10px ;
+     
+ }
+ #container1 img {
+     width: 100%;
+     height: 230px;
+ }
+ .item{
+     padding: 20px;
+     padding-bottom: 40px;
+      /* box-shadow: rgb(139, 250, 83) 0px 3px 8px;  */
+      box-shadow: rgb(139, 250, 83) 0px 3px 8px;
+      
+     border-radius: 5%;
+    height: 350px;
+ }
+ .addtocartbtn button{
+     font-weight: bold;
+     color: #fff;
+     background-color: rgb(250, 178, 83);
+     font-size: 18px;
+     border-radius: 6px;
+     padding: 10px 26px;
+     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     cursor: pointer;
+     border: none;
+     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+     width: 80%;
+     
+ }
+ .item .quantity{
+    display: flex;
+ }
+ .item .quantity button{
+    padding:0 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+ }
+
+ .price-stock{
+     display: flex;
+     justify-content: space-between;
+ }
+ .addtocartbtn{
+     display: flex;
+    justify-content: center;
+    margin-top: 20px;
+ }
+ 
+ .price-stock p{
+     margin: 0;padding: 1px 10px;
+     background-color: #f0f0f5;
+ }
+ 
+ 
+ /*Css for Order summary div*/
+   #ordersummary {
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    box-shadow: rgb(139, 250, 83) 0px 3px 8px;
+    padding: 40px;
+}
+#ordersummary #hr1 {
+    margin: 8px 0;
+    border: 1px solid black;
+}
+#ordersummary hr {
+    margin: 12px 0;
+
+}
+#ordersummary .subtotal {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+#payment {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #1377c9;
+    border: none;
+    color: white;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+#apply {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #fff;
+    border: none;
+    color: #1377c9;
+    margin: 20px 0;
+    border: 2px solid #1377c9;
+    border-radius: 5px;
+}
+#apply:hover {
+    background-color: #090442;
+    color: white;
+    border: 2px solid #090442;
+}
+#coupon-input input {
+    width: 65%;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #fff;
+    border: none;
+    margin: 20px 0;
+    border: 2px solid #1377c9;
+    border-radius: 5px;
+}
+#coupon-input button {
+    padding: 10px 15px;
+    font-size: 20px;
+    background-color: #090442;
+    color: #fff;
+    border-radius: 8px;
+}
+#otp-input input {
+    width: 65%;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #fff;
+    border: none;
+    margin: 20px 0;
+    border: 2px solid #1377c9;
+    border-radius: 5px;
+}
+#otp-input button {
+    padding: 10px 15px;
+    font-size: 20px;
+    background-color: #090442;
+    color: #fff;
+    border-radius: 8px;
+}
+#congrats {
+    text-align: center;
+}
+#congrats span {
+    color: green;
+    font-weight: 1000;
+}
+#saving {
+    text-align: center;
+}
+#saving span {
+    color: red;
+    font-weight: 1000;
+}
+#discount {
+    color: red;
+    font-weight: 1000;
+}
