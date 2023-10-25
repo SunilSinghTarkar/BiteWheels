@@ -20,12 +20,11 @@ import lombok.NoArgsConstructor;
 public class OrderItems {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int orderItemsId;
+	private int orderItemId;
 	@JsonIgnore
 	@ManyToOne
 	private Carts cart;
-	@OneToOne
-	@JoinColumn(name = "item_id")
+	@ManyToOne
 	private Items item;
 	private int quantity;
 	private double subtotal;

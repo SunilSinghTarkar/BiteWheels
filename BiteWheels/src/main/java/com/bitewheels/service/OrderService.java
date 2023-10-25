@@ -18,8 +18,10 @@ public interface OrderService {
 
 	public String deleteOrderItem(Integer orderItemId);
 
-	public Carts createCart();
+	public Carts createCart(Integer userId);
 
 	public Carts getCartById(Integer cartId);
+
+	public boolean checkInCart(Integer cartId, Integer itemId);
 
 }

@@ -1,0 +1,156 @@
+/*Css for Navbar Strats from here*/
+*,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Varela Round';
+}
+
+nav {
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 200px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    box-sizing: border-box;
+
+}
+
+.logo img {
+    max-width: 60px;
+    height: auto;
+    border-radius: 20%;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    margin-right: 50px;
+}
+
+.menu li:last-child {
+    margin-right: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+/*Css for Top container*/
+#container {
+    margin: 50px 200px;
+
+}
+/*Css for herader*/
+#header img {
+    width: 100%;
+}
+
+/* Css for aboutus */
+#aboutus {
+    /* border: 2px solid red; */
+    margin: 10px 0;
+    padding: 40px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-family: 'Varela Round';
+}
+
+/*Css for offers container Container1*/
+#container1 {
+    margin: 20px 0;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+#container1 img {
+    width: 100%;
+    cursor: pointer;
+}
+
+/*Css for What's you mood  Container2*/
+#container2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+
+}
+
+#container2 img {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+/*Css for container3 */
+#container3 img {
+    /* width: 100%; */
+
+    height: 50px;
+}
+
+#container3 {
+    background-color: #f0f0f5;
+    font-size: 28px;
+    text-align: start;
+    line-height: 32px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 200px;
+    font-family: 'Varela Round';
+}
+
+/*Css for Footer starts from here*/
+.copyright {
+    margin: 0 200px;
+    padding: 0;
+}
+
+.site-footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0 0 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 200px;
+}
+
+.footer-column {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+footer h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.site-footer a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
